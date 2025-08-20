@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors-Cany</title>
+    <style>
+      /* Reset styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        background-color: #ff6347; /* Tomato background */
+        color: #333;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #21f9ea;
+        font-size: 5em;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #84ff00;
+        font-size: 1em;
+      }
+
+      div {
+        border-radius: 10px;
+        padding: 20px;
+        width: 70%;
+        height: auto;
+        margin: 50px auto;
+        transition: transform 0.3s ease;
+      }
+
+      div:hover {
+        transform: scale(1.01);
+      }
+
+      .div1 {
+        padding: 40px;
+        background-color: #ff00ff;
+        box-shadow: 0 4px 12px rgba(148, 0, 211, 0.759);
+      }
+      #random-sound {
+        background-color: #00ff7f;
+      }
+
+      .div2 {
+        background-color: #00ffff;
+        box-shadow: 0 4px 12px rgba(0, 255, 255, 0.759);
+        padding: 40px;
+      }
+      #erasers {
+        background-color: #ffff00;
+      }
+
+      .div3 {
+        background-color: #ffff00;
+        box-shadow: 0 4px 12px rgba(255, 255, 0, 0.759);
+        padding: 40px;
+      }
+      #superhero {
+        background-color: #1e90ff;
+      }
+
+      .div4 {
+        background-color: #ffb300;
+        box-shadow: 0 4px 12px rgba(255, 140, 0, 0.759);
+        padding: 40px;
+      }
+      #moon {
+        background-color: #00ffcc;
+      }
+
+      .div5 {
+        background-color: #00ff7f;
+        box-shadow: 0 4px 12px rgba(0, 255, 127, 0.759);
+        padding: 40px;
+      }
+      #dinosaur {
+        background-color: #b266ff;
+      }
+
+      .div6 {
+        background-color: #00ffcc;
+        box-shadow: 0 4px 12px rgba(0, 255, 204, 0.759);
+        padding: 40px;
+      }
+      #yell {
+        background-color: #ff00ff;
+      }
+
+      .div7 {
+        background-color: #b266ff;
+        box-shadow: 0 4px 12px #b266ffc2;
+        padding: 40px;
+      }
+      #plotting {
+        background-color: #00ffff;
+      }
+
+      .div8 {
+        background-color: #1e90ff;
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.759);
+        padding: 40px;
+      }
+      #autobiography {
+        background-color: #ffb300;
+      }
+
+      .div9 {
+        background-color: #adff2f;
+        box-shadow: 0 4px 12px rgba(173, 255, 47, 0.759);
+        height: 196px;
+        padding: 40px;
+      }
+
+      main {
+        text-align: center;
+        color: #2d004b;
+        font-size: 2rem;
+      }
+
+      input {
+        display: inline-block;
+        margin-top: 20px;
+        width: 70%;
+        height: 100px;
+        padding: 10px;
+        border: 2px solid #ff7f50;
+        color: #ff6347;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0px 12px rgba(255, 127, 80, 0.759);
+        transition: 300ms ease-in-out;
+      }
+
+      input:hover {
+        transform: scale(1.03);
+      }
+
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 20px rgba(255, 127, 80, 0.759);
+        transform: scale(1.03);
+      }
+
+      footer {
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        color: #ff7f50;
+        font-size: 20px;
+        text-shadow: 0 0 4px rgba(255, 127, 80, 0.4),
+          0 0 8px rgba(255, 127, 80, 0.2);
+      }
+
+      span {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 25px;
+      }
+
+      /* Popup Modal Styles */
+      /* .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff6347a1; /* tomato with opacity 
+        backdrop-filter: blur(5px);
+        z-index: 9999;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }*/
+
+      .popup {
+        background: #ff00ff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #9400d3;
+        text-align: center;
+        width: 90%;
+        max-width: 600px;
+        color: #fff;
+        transition: transform 0.3s ease;
+        margin-top: 121px;
+        margin-bottom: 121px;
+      }
+
+      .popup:hover {
+        transform: scale(1.1);
+      }
+
+      .popup h2 {
+        color: #84ff00;
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+      }
+
+      .popup input {
+        width: 80%;
+        margin: 15px 0;
+        height: 60px;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 12px #ff7f50;
+        color: #ff6347;
+      }
+
+      .popup button {
+        margin: 10px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10px;
+        background-color: #00ffff;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 0 10px #00ffff;
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="colors-cany" method="post">
+      <div class="popup-overlay" id="popup">
+        <div class="popup">
+          <h2>Before You Start...</h2>
+          <p>Want to leave your name or Discord tag? (Optional)</p>
+          <input
+            type="text"
+            id="popup-name"
+            placeholder="Your Name (Optional)"
+            name="name"
+          />
+          <input
+            type="text"
+            id="popup-discord"
+            placeholder="Discord Name (Optional)"
+            name="discord-name"
+          />
+        </div>
+      </div>
+
+      <h1>Colors-Cany</h1>
+      <h2>Filled by Few, Loved by Many.</h2>
+      <main>
+        <div class="div1">
+          <label for="random-sound">1. Tell us a random sound u like??</label>
+          <br />
+          <input
+            id="random-sound"
+            name="q1"
+            type="text"
+            placeholder="e.g. boop, zap, meow, etc."
+          />
+        </div>
+
+        <div class="div2">
+          <label for="erasers">
+            How many erasers do you think you`ve lost in your lifetime??</label
+          >
+          <br />
+          <input
+            id="erasers"
+            name="q2"
+            type="text"
+            placeholder="e.g. 100, 700, never??(weird)"
+          />
+        </div>
+
+        <div class="div3">
+          <label for="superhero">What`s your superhero name today??</label>
+          <br />
+          <input
+            id="superhero"
+            name="q3"
+            type="text"
+            placeholder="e.g. The Midnight Pickle"
+          />
+        </div>
+
+        <div class="div4">
+          <label for="moon"
+            >If you could rename the moon, what would you call it??</label
+          >
+          <br />
+          <input
+            id="moon"
+            name="q4"
+            type="text"
+            placeholder="e.g. Silver Lantern"
+          />
+        </div>
+
+        <div class="div5">
+          <label for="dinosaur">What would you name a pet dinosaur?</label>
+          <br />
+          <input
+            id="dinosaur"
+            name="q5"
+            type="text"
+            placeholder="e.g. Sir Bites-a-Lot"
+          />
+        </div>
+
+        <div class="div6">
+          <label for="yell">
+            What would you yell if you were the main character in an anime
+            fight?</label
+          >
+          <br />
+          <input
+            id="yell"
+            name="q6"
+            type="text"
+            placeholder="e.g. EAT SOCKS, wait what"
+          />
+        </div>
+
+        <div class="div7">
+          <label for="plotting">Who is secretly plotting against you?</label>
+          <br />
+          <input
+            id="plotting"
+            name="q7"
+            type="text"
+            placeholder="e.g. Chat GPT"
+          />
+        </div>
+
+        <div class="div8">
+          <label for="autobiography">
+            If your keyboard could write its autobiography, what would be the
+            title?</label
+          >
+          <br />
+          <input
+            id="autobiography"
+            name="q8"
+            type="text"
+            placeholder="e.g. Fingers I Never Knew"
+          />
+        </div>
+
+        <div class="div9">
+          <button type="submit">Button 01</button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 02
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 03
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 04
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 05
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 06
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 07
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 08
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 09
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 10
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 11
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 12
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 13
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 14
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 15
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 16
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 17
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 18
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 19
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 20
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 21
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 22
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 23
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 24
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 25
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 26
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 27
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 28
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 29
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 30
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 31
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 32
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 33
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 34
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 35
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 36
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 37
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 38
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 39
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 40
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 41
+          </button>
+          <button type="button" onclick="window.location.href='Worng.html'">
+            Button 42
+          </button>
+        </div>
+      </main>
+    </form>
+    <footer>
+      <p>
+        <span>WORRY NOT</span>
+        <br />
+        Your Data Will Be Painted Into the Sky
+      </p>
+    </footer>
+  </body>
+</html>

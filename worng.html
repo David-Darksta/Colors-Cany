@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wrong Button</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ff6347; /* Tomato background */
+        color: #21f9ea; /* Same as h1 on main page */
+        font-family: Arial, sans-serif;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #b266ff; /* Purple background */
+        border-radius: 10px;
+        padding: 20px;
+        width: 50%;
+        height: auto;
+        margin: 50px auto;
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover {
+        transform: scale(1.01);
+      }
+
+      h1 {
+        font-size: 5em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 2rem;
+        color: #84ff00; /* Same as h2 on main page */
+        margin-bottom: 30px;
+        text-shadow: 0 0 8px rgba(132, 255, 0, 0.4);
+      }
+
+      .hint {
+        font-size: 1.2rem;
+        color: #000000;
+        opacity: 0.9;
+        text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+      }
+
+      .margin {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="margin">Wrong Button!</h1>
+      <p class="margin">That wasn`t the right one. Keep searching...</p>
+      <div class="hint margin">
+        (There`s only one button that works. Out of 47 😏)
+      </div>
+      <button class="margin" onclick="window.location.href='index.html'">
+        Go Back
+      </button>
+    </div>
+  </body>
+</html>
